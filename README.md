@@ -1,5 +1,5 @@
 # Rain-Dodge
-================
+
  This is the first game that I have created, while learning about Pygame module.
 
  It is a simple game where the player has to dodge the raindrops falling from the sky.

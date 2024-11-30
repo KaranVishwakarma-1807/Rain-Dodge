@@ -3,6 +3,7 @@ import pygame
 import time
 import random
 pygame.font.init() #initializing the font module
+import os
 
 
 #creating the window(in pixels)
@@ -13,7 +14,7 @@ pygame.display.set_caption("Rain Dodge")
 
 
 #creating the background
-BG = pygame.image.load("./Resources/Rain_Dodge/bg.jpeg") #define the path of the resource
+BG = pygame.image.load(os.path.join("./Rain Dodge","Resource","bg.jpeg")) #define the path of the resource
 #to scale the image
 BG = pygame.transform.scale(BG, (WIDTH, HEIGHT))
 
@@ -75,7 +76,7 @@ def main():
     #main game loop
     while run:
 
-        clock.tick(120) #60 frames per second
+        clock.tick(60) #60 frames per second
 
         elapsed_time = time.time() - start_time  #give the remaining time since the start
 

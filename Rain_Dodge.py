@@ -14,7 +14,7 @@ pygame.display.set_caption("Rain Dodge")
 
 
 #creating the background
-BG = pygame.image.load(os.path.join("./Rain Dodge","Resource","bg.jpeg")) #define the path of the resource
+BG = pygame.image.load(os.path.join("./Resource","bg.jpeg")) #define the path of the resource
 #to scale the image
 BG = pygame.transform.scale(BG, (WIDTH, HEIGHT))
 

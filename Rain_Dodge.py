@@ -66,7 +66,7 @@ def main():
     elapsed_time = 0 
 
     #generating the projectiles
-    drop_add_increment = 2000  #time in milliseconds -> adds a new projectile in 2000 milsec
+    drop_add_increment = 3000  #time in milliseconds -> adds a new projectile in 3000 milsec
     drop_count = 0 #tells when we should add a new projectile 
 
     drops = []  #list to hold the projectiles

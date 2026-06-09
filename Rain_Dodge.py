@@ -7,7 +7,7 @@ import os
 
 
 #creating the window(in pixels)
-WIDTH, HEIGHT = 1000, 800 
+WIDTH, HEIGHT = 500, 800 
 WIN = pygame.display.set_mode((WIDTH,HEIGHT))
 #caption for the widown(name for the window)
 pygame.display.set_caption("Rain Dodge")
@@ -43,7 +43,7 @@ def draw(player, elapsed_time, drops):
 #defining a character
 PLAYER_WIDTH = 40
 PLAYER_HEIGHT = 60
-PLAYER_VEL = 5
+PLAYER_VEL = 10
 
 
 #defining the projectile
@@ -66,7 +66,7 @@ def main():
     elapsed_time = 0 
 
     #generating the projectiles
-    drop_add_increment = 3000  #time in milliseconds -> adds a new projectile in 3000 milsec
+    drop_add_increment = 2000  #time in milliseconds -> adds a new projectile in 3000 milsec
     drop_count = 0 #tells when we should add a new projectile 
 
     drops = []  #list to hold the projectiles
@@ -103,6 +103,10 @@ def main():
             player.x -= PLAYER_VEL
         if keys[pygame.K_RIGHT] and player.x + PLAYER_VEL + player.width <= WIDTH: #adding player boundaries
             player.x += PLAYER_VEL
+        if keys[pygame.K_DOWN] and player.y + PLAYER_VEL + player.height <= HEIGHT: #adding player boundaries
+            player.y += PLAYER_VEL
+        if keys[pygame.K_UP] and player.y - PLAYER_VEL >= 0: #adding player boundaries
+            player.y -= PLAYER_VEL
 
         #moving the projectiles
         for drop in drops[:]:
